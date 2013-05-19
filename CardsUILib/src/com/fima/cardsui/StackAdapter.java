@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 
 import com.fima.cardsui.objects.AbstractCard;
 import com.fima.cardsui.objects.CardStack;
+import com.fima.cardsui.objects.OverflowCard;
 
 public class StackAdapter extends BaseAdapter {
 
@@ -44,7 +45,7 @@ public class StackAdapter extends BaseAdapter {
 		final CardStack stack = getItem(position);
 		stack.setAdapter(this);
 		stack.setPosition(position);
-
+			
 		// TODO: caching is not working well
 
 		// if (convertView != null) {

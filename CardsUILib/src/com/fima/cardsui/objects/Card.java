@@ -15,13 +15,13 @@ public abstract class Card extends AbstractCard {
 	public interface OnCardSwiped {
 		public void onCardSwiped(Card card, View layout);
 	}
-
+	
 	private OnCardSwiped onCardSwipedListener;
 	private OnClickListener mListener;
 	protected View mCardLayout;
 
 	public Card() {
-
+		
 	}
 	
 	public Card(String title) {
@@ -38,7 +38,7 @@ public abstract class Card extends AbstractCard {
 		this.desc = desc;
 		this.image = image;
 	}
-
+	
 	@Override
 	public View getView(Context context, boolean swipable) {
 		return getView(context, false);
@@ -161,5 +161,4 @@ public abstract class Card extends AbstractCard {
 	protected int getFirstCardLayout() {
 		return R.layout.item_card_empty_first;
 	}
-
 }
